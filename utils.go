@@ -6,16 +6,16 @@ import (
 )
 
 //Indicator - do we buy, sell, or hold?
-type Indicator byte
+type indicator byte
 
 //CandlePart - OHLC?
 type CandlePart byte
 
 //constants
 const (
-	BUY  Indicator = Indicator('B')
-	SELL Indicator = Indicator('S')
-	HOLD Indicator = Indicator(0)
+	BUY  indicator = indicator('B')
+	SELL indicator = indicator('S')
+	HOLD indicator = indicator(0)
 )
 
 // ohlc
