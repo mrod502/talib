@@ -6,16 +6,22 @@ import (
 )
 
 //Indicator - do we buy, sell, or hold?
-type indicator byte
+type Indicator byte
+
+//TradeSignal - tell someone what to trade
+type TradeSignal struct {
+	Side   Indicator
+	Symbol string
+}
 
 //CandlePart - OHLC?
 type CandlePart byte
 
 //constants
 const (
-	BUY  indicator = indicator('B')
-	SELL indicator = indicator('S')
-	HOLD indicator = indicator(0)
+	BUY  Indicator = Indicator('B')
+	SELL Indicator = Indicator('S')
+	HOLD Indicator = Indicator(0)
 )
 
 // ohlc
